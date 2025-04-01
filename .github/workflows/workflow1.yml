@@ -20,6 +20,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: To Show Error
+        run: echo "Should fail at this point ..." ; exit 1
+
       # Run a one-line script
       - name: Run a one-line script
         run: echo "Continuous Integration"
