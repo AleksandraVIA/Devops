@@ -1,3 +1,6 @@
+#FROMmaven:3.9.6-eclipse-temurin-21-alpine ASbuildRUNmkdir-p /appWORKDIR/appCOPYpom.xml /appCOPYsrc/app/srcRUNmvn-B package --file pom.xml -DskipTestsFROMeclipse-temurin:21-jdk-alpineEXPOSE8080COPY--from=build /app/target/*jar devops-demo-1.0.jarENTRYPOINT["java","-jar","devops-demo-1.0.jar"]
+
+
 # Use an official Maven image with OpenJDK
 FROM maven:3.8.4-openjdk-11-slim AS build
 
